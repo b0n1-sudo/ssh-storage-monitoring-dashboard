@@ -1,0 +1,7 @@
+{
+  "servers": [
+    {"name": "server-a", "host": "server-a.example.org", "port": 22, "username": "monitor", "key_filename": "~/.ssh/id_ed25519"},
+    {"name": "server-b", "host": "server-b.example.org", "username": "monitor", "password_env": "SSH_MONITOR_SERVER_B_PASSWORD"},
+    {"name": "server-via-jump", "host": "internal.example.org", "username": "monitor", "key_filename": "~/.ssh/id_ed25519", "jump_host": {"host": "gateway.example.org", "port": 22, "username": "monitor", "key_filename": "~/.ssh/id_ed25519"}}
+  ]
+}
